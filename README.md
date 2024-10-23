@@ -1,7 +1,3 @@
-Here's a sample `README.md` for your **Pathfinding Visualizer** project, designed for GitHub. This README will help you clearly explain the purpose, features, and instructions to anyone using or contributing to the project.
-
----
-
 # Pathfinding Visualizer
 
 An interactive web-based application for visualizing various pathfinding algorithms on a grid, integrated with map-based routing features. This tool allows users to set start, target, and bomb nodes, and visualize how different algorithms explore the grid to find the shortest path.
