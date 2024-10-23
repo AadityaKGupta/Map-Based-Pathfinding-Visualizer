@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map-Based Visualizer</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="public/styling/mapimage.webp"/>
+    
+    <style>
+        /* Simple style to fit the map to the viewport */
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Distance display style */
+        #distanceDisplay {
+            position: absolute;
+            z-index: 1000;
+            top: 80px;
+            left: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #pathfinder{
+            position: absolute;
+            z-index: 1000;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%); /* Center the panel horizontally */
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #visualizerButton {
+            position: absolute;
+            z-index: 1000;
+            top: 10px;
+            right: 10px; /* Adjust position to top-right corner */
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        #currentLocationButton {
+            position: absolute;
+            z-index: 1000;
+            top: 70px; /* Adjust to place it below the pathfinder button */
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Distance and Time display -->
+<div id="distanceDisplay">Distance: 0 km, Time: 0 min</div>
+
+<!-- Button to trigger finding the shortest path -->
+<div id="pathfinder">
+    <button id="findPathButton" class="btn btn-success">Find Shortest Path</button>
+    <button id="clearButton" class="btn btn-danger">Clear Map</button>
+</div>
+
+<div id="visualizerButton">
+    <a href="index1.html" class="btn btn-primary">Pathfinder Visualizer</a>
+</div>
+
+<div id="currentLocationButton">
+    <button id="getCurrentLocation" class="btn btn-info">My Location</button>
+</div>
+
+<!-- Map container -->
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the Leaflet map
+    var map = L.map('map').setView([20.5937, 78.9629], 5); // Set default view to India
+
+    // Load and display OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Variables to store start and end points
+    var startMarker, endMarker, routeLayer, currentLocationMarker;
+
+    // Function to get and display the user's current location
+    function showCurrentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+
+                // Set the map view to the user's current location with slight zoom
+                map.setView([lat, lng], 15); // Adjust zoom level as needed
+
+                // Add or update the current location marker
+                if (currentLocationMarker) {
+                    currentLocationMarker.setLatLng([lat, lng]);
+                } else {
+                    currentLocationMarker = L.circleMarker([lat, lng], {
+                        radius: 5,
+                        fillColor: 'blue', // Use blue for the marker
+                        color: 'white',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 1
+                    }).addTo(map).bindPopup("You are here").openPopup();
+                }
+            }, function () {
+                alert("Failed to get your current location.");
+            }, {
+                enableHighAccuracy: true, // Enable high accuracy if available
+                timeout: 5000, // Set timeout for 5 seconds
+                maximumAge: 0 // Do not use cached position
+            });
+        } else {
+            alert("Geolocation is not supported by your browser.");
+        }
+    }
+
+    // Automatically zoom into the user's location when the map loads
+    showCurrentLocation();
+
+    // Event listener to add markers on click (first click for start, second for end)
+    map.on('click', function (e) {
+        if (!startMarker) {
+            // Place start marker
+            startMarker = L.marker(e.latlng).addTo(map).bindPopup("Start Point").openPopup();
+        } else if (!endMarker) {
+            // Place end marker
+            endMarker = L.marker(e.latlng).addTo(map).bindPopup("End Point").openPopup();
+        }
+    });
+
+    // Function to find and display the shortest path using OSRM
+    document.getElementById('findPathButton').addEventListener('click', function () {
+        if (!startMarker || !endMarker) {
+            alert("Please set both start and end points.");
+            return;
+        }
+
+        // Get coordinates of the start and end markers
+        var startCoords = startMarker.getLatLng();
+        var endCoords = endMarker.getLatLng();
+
+        // OSRM API endpoint for finding the route between two points
+        var osrmUrl = `https://router.project-osrm.org/route/v1/driving/${startCoords.lng},${startCoords.lat};${endCoords.lng},${endCoords.lat}?geometries=geojson`;
+
+        // Fetch the route data from OSRM
+        fetch(osrmUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.routes && data.routes.length > 0) {
+                    // Get the route geometry (polyline) from the API response
+                    var routeCoords = data.routes[0].geometry.coordinates.map(coord => [coord[1], coord[0]]);
+
+                    // Remove previous route if any
+                    if (routeLayer) {
+                        map.removeLayer(routeLayer);
+                    }
+
+                    // Draw the route as a polyline on the map
+                    routeLayer = L.polyline(routeCoords, { color: 'blue' }).addTo(map);
+
+                    // Adjust the map view to fit the route
+                    map.fitBounds(routeLayer.getBounds());
+
+                    // Calculate and display the distance and time
+                    var distance = data.routes[0].distance / 1000; // Distance in kilometers
+                    var duration = data.routes[0].duration; // Duration in seconds
+                    var timeInMinutes = (duration / 60).toFixed(0); // Convert to minutes
+                    document.getElementById('distanceDisplay').innerText = `Distance: ${distance.toFixed(2)} km, Time: ${timeInMinutes} min`;
+
+                } else {
+                    alert("No route found!");
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching route:', error);
+            });
+    });
+
+    // Clear all markers and route from the map
+    document.getElementById('clearButton').addEventListener('click', function () {
+        if (startMarker) map.removeLayer(startMarker);
+        if (endMarker) map.removeLayer(endMarker);
+        if (routeLayer) map.removeLayer(routeLayer);
+        if (currentLocationMarker) map.removeLayer(currentLocationMarker);
+        startMarker = null;
+        endMarker = null;
+        routeLayer = null;
+        currentLocationMarker = null;
+        document.getElementById('distanceDisplay').innerText = "Distance: 0 km, Time: 0 min"; // Reset distance and time display
+    });
+
+    // Event listener for the "My Location" button
+    document.getElementById('getCurrentLocation').addEventListener('click', function () {
+        showCurrentLocation();
+    });
+</script>
+</body>
+</html>
