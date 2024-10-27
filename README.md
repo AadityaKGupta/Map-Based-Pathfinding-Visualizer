@@ -4,7 +4,7 @@ An interactive web-based application for visualizing various pathfinding algorit
 
 ## Features
 
-- **Start & Target Nodes**: Set your starting point and destination on the grid or directly on the map.
+- **Start & Target Nodes**: Set your starting point and destination on the grid.
 - **Pathfinding Algorithms**: Visualize popular pathfinding algorithms like A*, Dijkstra's, and more.
 - **Bomb & Weight Nodes**: Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
 - **Grid-Based Visualization**: The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
