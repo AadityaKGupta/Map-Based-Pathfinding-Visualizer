@@ -62,7 +62,7 @@ To run this project locally, you will need:
 
 ## Screenshots
 
-![Map-Based Pathfinding Visualizer Interface](path-finding-1.png)
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1SUsDCI1OV_sdSL9CY3D27J9a7vax34QJ)
 
 ## Roadmap
 
