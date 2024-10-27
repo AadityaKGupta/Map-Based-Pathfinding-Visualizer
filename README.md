@@ -100,10 +100,14 @@ To run this project locally, you will need:
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1OBZs1acLVNiCXZP3M_hdj2kYP0Jkdxhh)
 
+8.) In the top right corner, you’ll see the map-based visualizer. Click it to open the map.
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1OBZs1acLVNiCXZP3M_hdj2kYP0Jkdxhh)
+
 7.) On the map, you can:
    - **Set the Start point** by clicking on your desired starting location.
 
-     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1_RLWCuCDuhvYJ99QDWbF4CfdOYmwUnOU)
+     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1xIpIOwUKFAezT8lRg-hBNLe8OaunAauS)
 
      
    - **Set the End point** by clicking on your target destination.
