@@ -33,7 +33,7 @@ To run this project locally, you will need:
 
 ### Start Visualizing
 
-1. Select a start node and a target node on the grid.
+1. Set your starting point and destination on the grid.
 2. Pick an algorithm from the "Algorithms" dropdown like A*, Dijkstra's, and more.
 3. Hit "Visualize!" to see the algorithm in action.
 4. In the top right corner, you’ll see the map-based visualizer. Click it to open the map.
@@ -61,6 +61,35 @@ To run this project locally, you will need:
 - **OSRM (Open Source Routing Machine)**: For route generation based on real-world map data.
 
 ## Screenshots
+
+1.) Set your starting point and destination on the grid.
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1AWf9cPihmte-k9hhWfBTAoc2Cy_8XGD5)
+
+2.) Pick an algorithm from the "Algorithms" dropdown like A*, Dijkstra's, and more.
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1HfFNujWobR3AYWloeM5DDhrI802JNe0U)
+
+3.) Hit "Visualize!" to see the algorithm in action.
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1tUcKvL6PGC1tKzwnDO0e5NnxeA9SsLRX)
+
+4.) Add bomb nodes (blockers).
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1tpaiFIOUFjk0-LH3cHflx7A7OM1nIIfm)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1AKe5_1oZUzhK-CU2hM5M246czvGKr_S2)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1NJZNSf0Ohnlv_AJDCuX78KT4NgvUjLZ1)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1gkBfGUaZ72kEUBFThbvZz6j1U9enhxJz)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1wXy2rctbnwLqTThLpUGD3g8UDmLImIg4)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1QZNJE1RxDUtQvt-hJLDt7KUGSHOrAKRa)
+
+
+
 1.) Once the map is displayed, click "Allow" to grant access to your location if prompted.
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1SUsDCI1OV_sdSL9CY3D27J9a7vax34QJ)
