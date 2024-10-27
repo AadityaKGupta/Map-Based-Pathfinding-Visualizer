@@ -9,7 +9,6 @@ An interactive web-based application for visualizing various pathfinding algorit
 - **Bomb & Weight Nodes**: Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
 - **Grid-Based Visualization**: The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
 - **Map Integration**: Option to visualize paths directly on a map using OpenStreetMap.
-- **Search Location**: Find cities using the search bar and integrate that with your pathfinding grid.
 
 ## Getting Started
 
