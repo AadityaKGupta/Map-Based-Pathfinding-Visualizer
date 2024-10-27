@@ -67,6 +67,18 @@ To run this project locally, you will need:
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1OBZs1acLVNiCXZP3M_hdj2kYP0Jkdxhh)
 
+2.) On the map, you can:
+   - **Set the Start point** by clicking on your desired starting location.
+
+     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
+
+     
+   - **Set the End point** by clicking on your target destination.
+
+     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
+
+7. Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint.
+
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
 
 
