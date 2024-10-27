@@ -101,12 +101,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 For any inquiries or feedback:
 
-Name: Aaditya Kumar Gupta
-Email: your-k.aaditya.g@gmail.com
-
 **Name**: Aaditya Kumar Gupta  
 **Email**: k.aaditya.g@gmail.com
 
----
-
-Let me know if this aligns with your project vision or if you’d like more details added!
