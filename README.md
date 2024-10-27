@@ -64,7 +64,7 @@ To run this project locally, you will need:
 
 1.) Set your starting point and destination on the grid.
 
-![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1AWf9cPihmte-k9hhWfBTAoc2Cy_8XGD5)
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1W3q8UNxKxwnjMgQVZLdI2C6d_v7JgneW)
 
 2.) Pick an algorithm from the "Algorithms" dropdown like A*, Dijkstra's, and more.
 
