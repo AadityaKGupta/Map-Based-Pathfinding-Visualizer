@@ -129,14 +129,6 @@ Future features and improvements:
 
 ## License
 
-# My Project Title
-
-## Description
-
-A brief description of your project.
-
-## License
-
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/AadityaKGupta/Map-Based-Pathfinding-Visualizer/blob/master/LICENSE) file for details.
 
 
