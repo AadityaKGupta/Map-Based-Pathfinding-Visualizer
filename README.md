@@ -1,89 +1,112 @@
-# Pathfinding Visualizer
+# Map-Based Pathfinding Visualizer
 
-An interactive web-based application for visualizing various pathfinding algorithms on a grid, integrated with map-based routing features. This tool allows users to set start, target, and bomb nodes, and visualize how different algorithms explore the grid to find the shortest path.
+An interactive web-based application for visualizing various pathfinding algorithms on a grid, now enhanced with map-based routing features. This tool allows users to set start, target, and bomb nodes, and visualize how different algorithms explore the grid and map to find the shortest path in real-world environments.
 
 ## Features
-- **Start & Target Nodes:** Set your starting point and destination on the grid.
-- **Pathfinding Algorithms:** Visualize popular pathfinding algorithms like A*, Dijkstra's, and more.
-- **Bomb & Weight Nodes:** Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
-- **Grid-Based Visualization:** The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
-- **Map Integration:** Option to visualize paths directly on a map (OpenStreetMap integration).
-- **Search Location:** Find cities using the search bar and integrate that with your pathfinding grid.
+
+- **Start & Target Nodes**: Set your starting point and destination on the grid or directly on the map.
+- **Pathfinding Algorithms**: Visualize popular pathfinding algorithms like A*, Dijkstra's, and more.
+- **Bomb & Weight Nodes**: Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
+- **Grid-Based Visualization**: The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
+- **Map Integration**: Option to visualize paths directly on a map using OpenStreetMap.
+- **Search Location**: Find cities using the search bar and integrate that with your pathfinding grid.
 
 ## Getting Started
 
 ### Prerequisites
+
 To run this project locally, you will need:
 - A modern web browser (Chrome, Firefox, Edge, etc.)
 - Internet connection for fetching external libraries (Leaflet.js, Bootstrap, etc.)
 
 ### Installation
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/Pathfinding-Visualizer.git
-   ```
-2. **Navigate to the Project Directory:**
-   ```bash
-   cd Pathfinding-Visualizer
-   ```
-3. **Open the `index.html` File in a Browser:**
-   You can simply open the `index.html` file in your browser to run the application.
 
-   Alternatively, you can serve the project locally using an HTTP server:
+1. **Clone the Repository**:
    ```bash
-   # Example using Python's built-in HTTP server
-   python -m http.server
+   git clone https://github.com/AadityaKGupta/PathFinding-Visualizer.git
    ```
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd Map-Based-Pathfinding-Visualizer
+   ```
+3. **Open the `index.html` File in a Browser**: You can simply open the `index.html` file in your browser to run the application.
 
-4. **Start Visualizing:**
-   - Select a start node and a target node.
-   - Pick an algorithm from the "Algorithms" dropdown.
-   - Hit "Visualize!" to see the algorithm in action.
+### Start Visualizing
 
-### Usage
-- **Start Node:** Click on the grid to set your starting position.
-- **Target Node:** Select your destination node.
-- **Bomb Node:** Place a bomb (or obstacle) to make pathfinding more challenging.
-- **Weight Node:** Place weighted nodes to simulate additional traversal cost.
-- **Clear Board:** Reset the grid for a fresh start.
-- **Clear Path:** Retain nodes but reset the path visualization.
-- **Use in Map:** Use the integration with OpenStreetMap to visualize your pathfinding in a real-world context.
+1. Select a start node and a target node on the grid **or directly on the map**.
+2. Pick an algorithm from the "Algorithms" dropdown.
+3. Hit "Visualize!" to see the algorithm in action.
+4. In the top right corner, you’ll see the map-based visualizer. Click it to open the map.
+5. Once the map is displayed, click "Allow" to grant access to your location if prompted.
+6. On the map, you can:
+   - **Set the Start Node** by clicking on your desired starting location.
+   - **Set the End Node** by clicking on your target destination.
+7. And you can find the shortest path between the startNode and endNode.
+
+## Usage
+
+- **Start Node**: Click on the grid or map to set your starting position.
+- **Target Node**: Select your destination node on the grid or map.
+- **Bomb Node**: Place a bomb (or obstacle) to make pathfinding more challenging.
+- **Weight Node**: Place weighted nodes to simulate additional traversal cost.
+- **Clear Board**: Reset the grid for a fresh start.
+- **Clear Path**: Retain nodes but reset the path visualization.
+- **Use in Map**: Use the integration with OpenStreetMap to visualize your pathfinding in a real-world context.
 
 ## Technologies Used
-- **HTML5 / CSS3 / JavaScript:** Core front-end technologies.
-- **Leaflet.js:** For map visualization and integration.
-- **Bootstrap:** For responsive design and styling.
-- **OSRM (Open Source Routing Machine):** For route generation based on real-world map data.
+
+- **HTML5 / CSS3 / JavaScript**: Core front-end technologies.
+- **Leaflet.js**: For map visualization and integration.
+- **Bootstrap**: For responsive design and styling.
+- **OSRM (Open Source Routing Machine)**: For route generation based on real-world map data.
 
 ## Screenshots
 
-![Pathfinding Visualizer Interface](path/to/your/screenshot.png)
+![Map-Based Pathfinding Visualizer Interface](path-finding-1.png)
 
 ## Roadmap
+
 Future features and improvements:
 - Add more pathfinding algorithms (e.g., Greedy BFS, Bidirectional Search).
 - Improve performance for larger grids.
 - Enhanced map-based visualization features.
 
 ## Contributing
+
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
 
 To contribute:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch-name`.
-3. Make your changes.
-4. Commit your changes: `git commit -m 'Add some feature'`.
-5. Push to the branch: `git push origin feature-branch-name`.
-6. Open a pull request.
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+   ```bash
+   git checkout -b feature-branch-name
+   ```
+3. **Make your changes**.
+4. **Commit your changes**:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+5. **Push to the branch**:
+   ```bash
+   git push origin feature-branch-name
+   ```
+6. **Open a pull request**.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
+
 For any inquiries or feedback:
-- **Name:** Aaditya Kumar Gupta
-- **Email:** [your-email@example.com](mailto:your-email@example.com)
+
+Name: Aaditya Kumar Gupta
+Email: your-k.aaditya.g@gmail.com
+
+**Name**: Aaditya Kumar Gupta  
+**Email**: k.aaditya.g@gmail.com
 
 ---
 
-Feel free to modify the content to better suit your specific project and branding!
+Let me know if this aligns with your project vision or if you’d like more details added!
