@@ -64,6 +64,9 @@ To run this project locally, you will need:
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1SUsDCI1OV_sdSL9CY3D27J9a7vax34QJ)
 
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1OBZs1acLVNiCXZP3M_hdj2kYP0Jkdxhh)
+
+
 ## Roadmap
 
 Future features and improvements:
