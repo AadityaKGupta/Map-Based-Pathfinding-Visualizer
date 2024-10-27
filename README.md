@@ -61,6 +61,7 @@ To run this project locally, you will need:
 - **OSRM (Open Source Routing Machine)**: For route generation based on real-world map data.
 
 ## Screenshots
+1.) Once the map is displayed, click "Allow" to grant access to your location if prompted.
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1SUsDCI1OV_sdSL9CY3D27J9a7vax34QJ)
 
