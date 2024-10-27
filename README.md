@@ -70,7 +70,7 @@ To run this project locally, you will need:
 2.) On the map, you can:
    - **Set the Start point** by clicking on your desired starting location.
 
-     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
+     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1_RLWCuCDuhvYJ99QDWbF4CfdOYmwUnOU)
 
      
    - **Set the End point** by clicking on your target destination.
