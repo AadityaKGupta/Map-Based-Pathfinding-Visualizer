@@ -39,9 +39,9 @@ To run this project locally, you will need:
 4. In the top right corner, you’ll see the map-based visualizer. Click it to open the map.
 5. Once the map is displayed, click "Allow" to grant access to your location if prompted.
 6. On the map, you can:
-   - **Set the Start Node** by clicking on your desired starting location.
-   - **Set the End Node** by clicking on your target destination.
-7. And click on the sortest path to find the shortest distance between the startNode and endNode.
+   - **Set the Start point** by clicking on your desired starting location.
+   - **Set the End point** by clicking on your target destination.
+7. Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint.
 
 ## Usage
 
