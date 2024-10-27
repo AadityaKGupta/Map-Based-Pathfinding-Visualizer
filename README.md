@@ -41,7 +41,7 @@ To run this project locally, you will need:
 6. On the map, you can:
    - **Set the Start Node** by clicking on your desired starting location.
    - **Set the End Node** by clicking on your target destination.
-7. And you can find the shortest path between the startNode and endNode.
+7. And click on the sortest path to find the shortest distance between the startNode and endNode.
 
 ## Usage
 
