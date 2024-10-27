@@ -4,7 +4,7 @@ An interactive web-based application for visualizing various pathfinding algorit
 
 ## Features
 
-- **Start & Target Nodes**: Set your starting point and destination on the grid and directly on map.
+- **Start & Target Nodes**: Set your starting point and ending point on the grid and directly on map.
 - **Pathfinding Algorithms**: Visualize popular pathfinding algorithms like A*, Dijkstra's, and more.
 - **Bomb & Weight Nodes**: Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
 - **Grid-Based Visualization**: The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
@@ -40,13 +40,13 @@ To run this project locally, you will need:
 6. On the map, you can:
    - **Set the Start point** by clicking on your desired starting location.
    - **Set the End point** by clicking on your target destination.
-7. Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint.
+7. Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint. You can also see the distance and time taken by the path.
 
 ## Usage
 
-- **Start Node**: Click on the grid or map to set your starting position.
-- **Target Node**: Select your destination node on the grid or map.
-- **Bomb Node**: Place a bomb (or obstacle) to make pathfinding more challenging.
+- **Start Node**: Click on the grid to set your starting position.
+- **Target Node**: Select your destination node on the grid.
+- **Bomb Node**: Place a bomb (or obstacle) to make pathfinding more challenging in the grid.
 - **Weight Node**: Place weighted nodes to simulate additional traversal cost.
 - **Clear Board**: Reset the grid for a fresh start.
 - **Clear Path**: Retain nodes but reset the path visualization.
@@ -113,7 +113,7 @@ To run this project locally, you will need:
 
      ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1lemMTOixKq7FkiucLm5OuBF17aJvX3tn)
 
-9.) Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint.
+9.) Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint. You can also see the distance and time taken by the path.
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
 
@@ -126,27 +126,6 @@ Future features and improvements:
 - Improve performance for larger grids.
 - Enhanced map-based visualization features.
 
-## Contributing
-
-Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
-
-To contribute:
-
-1. **Fork the repository**.
-2. **Create a new branch**:
-   ```bash
-   git checkout -b feature-branch-name
-   ```
-3. **Make your changes**.
-4. **Commit your changes**:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-5. **Push to the branch**:
-   ```bash
-   git push origin feature-branch-name
-   ```
-6. **Open a pull request**.
 
 ## License
 
