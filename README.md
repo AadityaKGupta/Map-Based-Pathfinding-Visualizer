@@ -4,7 +4,7 @@ An interactive web-based application for visualizing various pathfinding algorit
 
 ## Features
 
-- **Start & Target Nodes**: Set your starting point and destination on the grid.
+- **Start & Target Nodes**: Set your starting point and destination on the grid and directly on map.
 - **Pathfinding Algorithms**: Visualize popular pathfinding algorithms like A*, Dijkstra's, and more.
 - **Bomb & Weight Nodes**: Add bomb nodes (blockers) or weight nodes (delays) to observe how they affect the pathfinding process.
 - **Grid-Based Visualization**: The grid is visualized with clear node representations for walls, visited nodes, shortest-path nodes, and more.
@@ -33,8 +33,8 @@ To run this project locally, you will need:
 
 ### Start Visualizing
 
-1. Select a start node and a target node on the grid **or directly on the map**.
-2. Pick an algorithm from the "Algorithms" dropdown.
+1. Select a start node and a target node on the grid.
+2. Pick an algorithm from the "Algorithms" dropdown like A*, Dijkstra's, and more.
 3. Hit "Visualize!" to see the algorithm in action.
 4. In the top right corner, you’ll see the map-based visualizer. Click it to open the map.
 5. Once the map is displayed, click "Allow" to grant access to your location if prompted.
