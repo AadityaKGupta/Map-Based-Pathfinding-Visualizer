@@ -75,7 +75,7 @@ To run this project locally, you will need:
      
    - **Set the End point** by clicking on your target destination.
 
-     ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b)
+     ![Pathfinding Visualizer Screenshot]([https://drive.google.com/uc?export=view&id=1mCWS0mi12TlZyOFGsmWgYHsq2EBbwm1b](https://drive.google.com/uc?export=view&id=1lemMTOixKq7FkiucLm5OuBF17aJvX3tn))
 
 7. Then click on the "Find Sortest Path" to find the shortest distance between the startpoint and endpoint.
 
