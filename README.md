@@ -122,7 +122,7 @@ To run this project locally, you will need:
 ## Roadmap
 
 Future features and improvements:
-- Add more pathfinding algorithms (e.g., Greedy BFS, Bidirectional Search).
+- Add more pathfinding algorithms (e.g., Greedy BFS and more).
 - Improve performance for larger grids.
 - Enhanced map-based visualization features.
 
