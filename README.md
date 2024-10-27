@@ -88,7 +88,11 @@ To run this project locally, you will need:
 
 ![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1QZNJE1RxDUtQvt-hJLDt7KUGSHOrAKRa)
 
+5.) Add weight nodes (delays).
 
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?export=view&id=1y7FIO_shoKyBss_or5jeM4u00k2MuKZ-)
+
+![Pathfinding Visualizer Screenshot](https://drive.google.com/uc?ecport=view&id=1nXgMCDpYLyMFFrdv12n-WnWPjmgl1R1Q)
 
 1.) Once the map is displayed, click "Allow" to grant access to your location if prompted.
 
