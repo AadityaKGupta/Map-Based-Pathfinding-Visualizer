@@ -134,8 +134,8 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ## Contact
 
-For any inquiries or feedback:
+For any inquiries or feedback, please reach out to:
 
-**Name**: Aaditya Kumar Gupta  
-**Email**: k.aaditya.g@gmail.com
-**GitHub**: [AadityaKGupta](https://github.com/AadityaKGupta)
+- **Name**: Aaditya Kumar Gupta
+- **Email**: k.aaditya.g@gmail.com
+- **GitHub**: [AadityaKGupta](https://github.com/AadityaKGupta)
