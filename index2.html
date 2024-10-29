@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/png" href="public/styling/mapimage.webp"/>
     
     <style>
-        /* Base style to fit the map to the viewport */
+        /* Simple style to fit the map to the viewport */
         #map {
             height: 100vh;
             width: 100%;
@@ -29,27 +29,25 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            font-size: 16px;
         }
 
-        #pathfinder {
+        #pathfinder{
             position: absolute;
             z-index: 1000;
             top: 10px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%); /* Center the panel horizontally */
             background-color: white;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            text-align: center;
         }
 
         #visualizerButton {
             position: absolute;
             z-index: 1000;
             top: 10px;
-            right: 10px;
+            right: 10px; /* Adjust position to top-right corner */
             background-color: white;
             padding: 10px;
             border-radius: 5px;
@@ -60,77 +58,13 @@
         #currentLocationButton {
             position: absolute;
             z-index: 1000;
-            top: 70px;
+            top: 70px; /* Adjust to place it below the pathfinder button */
             right: 10px;
             background-color: white;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
             text-align: center;
-        }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            #distanceDisplay {
-                font-size: 14px;
-                padding: 8px;
-                top: 70px;
-                left: 5px;
-                width: auto;
-                max-width: 150px;
-            }
-
-            #pathfinder {
-                width: 90%;
-                left: 5%;
-                padding: 8px;
-                font-size: 14px;
-            }
-
-            #visualizerButton {
-                top: 10px;
-                right: 5px;
-                padding: 8px;
-                font-size: 14px;
-            }
-
-            #currentLocationButton {
-                top: 70px;
-                right: 5px;
-                padding: 8px;
-                font-size: 14px;
-            }
-        }
-
-        /* Smaller mobile devices */
-        @media (max-width: 480px) {
-            #distanceDisplay {
-                font-size: 12px;
-                padding: 6px;
-                top: 60px;
-                left: 5px;
-            }
-
-            #pathfinder {
-                width: 90%;
-                left: 5%;
-                padding: 6px;
-                font-size: 12px;
-            }
-
-            #visualizerButton {
-                top: 10px;
-                right: 5px;
-                padding: 6px;
-                font-size: 12px;
-            }
-
-            #currentLocationButton {
-                top: 60px;
-                right: 5px;
-                padding: 6px;
-                font-size: 12px;
-            }
         }
     </style>
 </head>
@@ -141,16 +75,16 @@
 
 <!-- Button to trigger finding the shortest path -->
 <div id="pathfinder">
-    <button id="findPathButton" class="btn btn-success btn-sm">Find Shortest Path</button>
-    <button id="clearButton" class="btn btn-danger btn-sm">Clear Map</button>
+    <button id="findPathButton" class="btn btn-success">Find Shortest Path</button>
+    <button id="clearButton" class="btn btn-danger">Clear Map</button>
 </div>
 
 <div id="visualizerButton">
-    <a href="index1.html" class="btn btn-primary btn-sm">Pathfinder Visualizer</a>
+    <a href="index.html" class="btn btn-primary">Pathfinder Visualizer</a>
 </div>
 
 <div id="currentLocationButton">
-    <button id="getCurrentLocation" class="btn btn-info btn-sm">My Location</button>
+    <button id="getCurrentLocation" class="btn btn-info">My Location</button>
 </div>
 
 <!-- Map container -->
